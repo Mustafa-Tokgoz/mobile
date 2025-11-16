@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTG | Flutter ve Mobil Programlama</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header id="anasayfa">
+        <nav>
+            <div class="logo">MTG</div>
+            <ul class="nav-links">
+                <li><a href="#anasayfa">Anasayfa</a></li>
+                <li><a href="#flutter">Flutter</a></li>
+                <li><a href="#nosql">NoSql</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+        <div class="hero-content">
+            <h1>Flutter ile Geleceğin Uygulamalarını Geliştirin</h1>
+            <p>Tek kod tabanı ile hem iOS hem de Android için yüksek performanslı uygulamalar.</p>
+            <a href="#flutter" class="cta-button">Hemen Başlayın</a>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="flutter">
+            <div class="container">
+                <h2><i class="fas fa-mobile-alt"></i> Flutter Nedir?</h2>
+                <div class="content-split">
+                    <div class="text-content">
+                        <p><strong>Flutter</strong>, Google tarafından oluşturulan, açık kaynaklı bir UI (kullanıcı arayüzü) yazılım geliştirme kitidir. Tek bir kod tabanından mobil (iOS, Android), web ve masaüstü (Windows, macOS, Linux) için <strong>hızlı, güzel ve yerel (native) performanslı</strong> uygulamalar oluşturmak için kullanılır.</p>
+                        <p>Dart programlama dilini kullanan Flutter, "widget" adı verilen bileşen tabanlı bir yapı sunar. Bu, esnek ve etkileyici kullanıcı arayüzleri oluşturmayı son derece kolaylaştırır.</p>
+                        
+                        <h3>Basit Bir Flutter Kodu</h3>
+                        <p>İşte temel bir "Merhaba Dünya" Flutter uygulaması:</p>
+                        <pre><code>
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('MTG Flutter App'),
+        ),
+        body: const Center(
+          child: Text('Merhaba, Flutter Dünyası!'),
+        ),
+      ),
+    );
+  }
+}
+                        </code></pre>
+                        <a href="https://flutter.dev" target="_blank" class="external-link">Flutter Resmi Web Sitesi <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <div class="image-content">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="nosql">
+            <div class="container">
+                <h2><i class="fas fa-database"></i> NoSql Veritabanları</h2>
+                <div class="content-split reverse">
+                    <div class="image-content">
+                        
+                    </div>
+                    <div class="text-content">
+                        <p><strong>NoSQL</strong> ("Not Only SQL" - Sadece SQL Değil), geleneksel ilişkisel (SQL) veritabanlarının (MySQL, PostgreSQL vb.) kısıtlamalarına bir alternatif olarak ortaya çıkan bir veritabanı yönetim sistemleri kategorisidir.</p>
+                        
+                        <h3>Geleneksel SQL'den Farkı Nedir?</h3>
+                        <ul>
+                            <li><strong>Esnek Şema:</strong> SQL veritabanları katı (strict) bir tablo yapısı (şema) gerektirir. NoSQL ise (özellikle Doküman tabanlı olanlar) şemasız veya dinamik şemalıdır. Bu, uygulamanızı geliştirirken veriyi hızla değiştirmenize olanak tanır.</li>
+                            <li><strong>Yatay Ölçeklenebilirlik:</strong> SQL genellikle dikey (daha güçlü bir sunucu) ölçeklenir. NoSQL ise yatay (daha fazla sunucu ekleyerek) ölçeklenmek üzere tasarlanmıştır, bu da onu büyük veri ve yüksek trafikli uygulamalar için ideal kılar.</li>
+                            <li><strong>Veri Modelleri:</strong> SQL sadece tablo/ilişki modelini kullanırken, NoSQL farklı ihtiyaçlar için farklı modeller sunar.</li>
+                        </ul>
+
+                        <h3>Popüler NoSQL Türleri ve Örnekleri</h3>
+                        <ol>
+                            <li><strong>Doküman (Document) Tabanlı:</strong> Veriyi JSON benzeri dokümanlarda saklar (Mobil için en popüler).
+                                <ul>
+                                    <li><strong>Örnekler:</strong> MongoDB, Firebase Firestore, CouchDB</li>
+                                </ul>
+                            </li>
+                            <li><strong>Anahtar-Değer (Key-Value) Tabanlı:</strong> Basit anahtar-değer çiftleri (Çok hızlıdır).
+                                <ul>
+                                    <li><strong>Örnekler:</strong> Redis, Amazon DynamoDB</li>
+                                </ul>
+                            </li>
+                            <li><strong>Sütun (Column-Family) Tabanlı:</strong>
+                                <ul>
+                                    <li><strong>Örnekler:</strong> Cassandra, HBase</li>
+                                </ul>
+                            </li>
+                            <li><strong>Graf (Graph) Tabanlı:</strong>
+                                <ul>
+                                    <li><strong>Örnekler:</strong> Neo4j</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog">
+            <div class="container">
+                <h2><i class="fas fa-feather-alt"></i> Mobil Programlama Blogu</h2>
+                <div class="blog-container">
+                    
+                    <article class="blog-post">
+                        
+                        <div class="blog-content">
+                            <h3>Cross-Platform Geliştirmede Yeni Trendler</h3>
+                            <p>Flutter ve React Native gibi araçlar, "tek kodla her platformda" vaadini gerçeğe dönüştürdü. Ancak 2025 ve sonrası, performans ve yerel (native) hissiyata daha fazla odaklanıyor. Kod paylaşım stratejileri (KMM - Kotlin Multiplatform Mobile) ve UI'da yerel bileşenlerin kullanımı (NativeScript) tekrar popülerlik kazanıyor.</p>
+                            <a href="#" class="read-more">Devamını Oku...</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-post">
+                        
+                        <div class="blog-content">
+                            <h3>Deklaratif UI: Geleceğin Arayüz Standardı</h3>
+                            <p>Flutter'ın popülerleştirdiği deklaratif (bildirimsel) UI paradigması, artık yerel geliştirmenin de standardı haline geldi. Google (Jetpack Compose) ve Apple (SwiftUI), arayüz geliştirme mantığını tamamen bu yöne kaydırdı. Bu, daha az kodla daha karmaşık ve reaktif arayüzler oluşturmak anlamına geliyor.</p>
+                            <a href="#" class="read-more">Devamını Oku...</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-post">
+                        
+                        <div class="blog-content">
+                            <h3>Mobil Uygulamalarda Cihaz Üzeri (On-Device) Yapay Zeka</h3>
+                            <p>Bulut tabanlı yapay zeka yerine, gizliliği koruyan ve internet bağlantısı gerektirmeyen 'cihaz üzeri' modeller (On-Device ML) yükselişte. Google'ın ML Kit'i ve Apple'ın Core ML'i, Flutter uygulamalarına bile kolayca entegre edilerek akıllı ve kişiselleştirilmiş deneyimler sunulmasını sağlıyor.</p>
+                            <a href="#" class="read-more">Devamını Oku...</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 | Designed By Gemini & MTG</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
